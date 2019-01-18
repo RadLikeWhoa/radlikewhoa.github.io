@@ -1,0 +1,181 @@
+.filters {
+  &.is-filtered .tag {
+    opacity: 0.3;
+    filter: grayscale(80%);
+  }
+
+  @include up-to(m) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    padding: 1.5em;
+    background-color: $control-light;
+    box-shadow: 0 2px 4px rgba($default, 0.35);
+    z-index: 100;
+    transform: translateX(-120%);
+    will-change: transform;
+
+    .has-transitions & {
+      transition: transform 0.25s ease-in-out;
+    }
+
+    &.is-overlaid {
+      transform: translateX(0);
+    }
+  }
+
+  .filter-close {
+    @include at-least(m) {
+      display: none;
+    }
+  }
+}
+
+.filter-list-wrapper {
+  @include up-to(m) {
+    flex-grow: 1;
+    padding: 1.5em 1.5em 0;
+    margin: -1.5em -1.5em 1.5em;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.filter-shade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($default, 0.8);
+  opacity: 0;
+  will-change: opacity;
+  z-index: 10;
+  pointer-events: none;
+
+  .has-transitions & {
+    transition: opacity 0.25s ease-in-out;
+  }
+
+  .filters.is-overlaid + & {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  @include at-least(m) {
+    display: none;
+  }
+}
+
+.filter-toggle {
+  margin-bottom: 3em;
+
+  [data-icon] {
+    padding-top: 0.175em;
+    margin-right: 0.5em;
+  }
+
+  @include at-least(m) {
+    display: none;
+  }
+}
+
+.filter-list {
+  margin-bottom: 2.5em;
+
+  &::after {
+    content: "";
+    flex-grow: 100000;
+  }
+
+  .tag {
+    min-width: 5em;
+    padding: 0.75em;
+		margin-left: 0;
+    color: #fff;
+		font: inherit;
+    border: none;
+    transition:
+			box-shadow 0.25s ease-in-out,
+			opacity 0.25s ease-in-out,
+			background-color 0.25s ease-in-out,
+			filter 0.25s ease-in-out;
+    will-change:
+			transform,
+			box-shadow,
+			opacity,
+			background-color,
+			filter;
+    cursor: pointer;
+
+    &.is-active {
+      opacity: 1;
+      filter: grayscale(0);
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 2px 3px rgba($default, 0.15);
+      opacity: 1;
+      filter: grayscale(0);
+    }
+
+    .label {
+      border-bottom: 1px solid transparent;
+      transition: border-bottom-color 0.25s ease-in-out;
+    }
+
+    &:focus .label {
+      border-bottom-color: $main;
+    }
+  }
+
+  @include up-to(m) {
+    margin-bottom: 0;
+  }
+}
+
+.tag {
+	&.filter-platform {
+	  background-color: #e75f5f;
+
+	  &:hover,
+	  &:focus {
+	    background-color: darken(#e75f5f, 10%);
+	  }
+	}
+
+	&.filter-type {
+	  background-color: #e78d5f;
+
+	  &:hover,
+	  &:focus {
+	    background-color: darken(#e78d5f, 10%);
+	  }
+	}
+
+	&.filter-tool {
+	  background-color: #e7ba5f;
+
+	  &:hover,
+	  &:focus {
+	    background-color: darken(#e7ba5f, 10%);
+	  }
+	}
+}
+
+.post-inline {
+  &.is-hidden {
+    display: none;
+  }
+
+  &.is-last {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+}

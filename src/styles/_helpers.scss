@@ -1,0 +1,41 @@
+%unstyled-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.small {
+  font-size: 0.75em;
+  line-height: 2;
+}
+
+%truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+%wide {
+  margin-left: -1.5em;
+  margin-right: -1.5em;
+}
+
+%wide-bordered {
+  @extend %wide;
+
+  border: 1px solid;
+  border-radius: 3px;
+
+  @include up-to(m) {
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+.faded {
+  color: darken(#fefefe, 40%);
+}

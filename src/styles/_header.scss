@@ -1,0 +1,262 @@
+.site-header {
+	display: flex;
+  justify-content: space-between;
+  max-width: 40em;
+	padding: 3em 0;
+  margin: 0 auto;
+	text-align: center;
+
+	a {
+    color: $highlight;
+  }
+
+  &.project-page a {
+    color: $main;
+  }
+
+	h1 {
+		margin: 0;
+	}
+}
+
+.site-logo {
+	display: block;
+  height: 1em;
+  width: 1.1em;
+	margin: 0.25em auto 0;
+  will-change: transform;
+
+  .site-header a:hover & {
+    animation: boink 0.25s ease-in-out;
+  }
+}
+
+@keyframes boink {
+  50% {
+    transform: rotateZ(-5deg);
+  }
+}
+
+.site-nav {
+  position: relative;
+  display: flex;
+  width: 50%;
+  margin-bottom: 0;
+  text-align: center;
+
+  .cb-hack:checked + & {
+    max-height: 18em;
+  }
+
+  @include up-to(m) {
+    max-height: 3em;
+    overflow: hidden;
+    z-index: 10;
+
+    .has-transitions & {
+      transition: max-height 0.25s ease-in-out;
+    }
+  }
+
+  @include at-least(m) {
+    padding: 0;
+    max-width: none;
+
+    &:hover .site-nav-item.is-active {
+      background-color: rgba(255, 255, 255, 0);
+
+      .label {
+        transform: translateY(1.5em);
+        opacity: 0;
+      }
+
+      [data-icon] {
+        opacity: 1;
+      }
+    }
+
+    .site-nav-item.is-active:hover {
+      .label {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      [data-icon] {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.cb-hack {
+  display: none;
+}
+
+.site-nav .site-nav-item,
+.menu-toggle {
+  @include up-to(m) {
+    color: $highlight;
+    background-color: #fff;
+    transition: background-color 0.25s ease-in-out;
+    will-change: background-color;
+
+    a {
+      color: $highlight;
+    }
+
+    &:nth-child(2) {
+      border-radius: 5px 5px 0 0;
+    }
+
+    &:nth-last-child(2) {
+      border-radius: 0 0 5px 5px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: darken(#fff, 3%);
+    }
+
+    [data-icon] {
+      float: right;
+      padding-top: 0.25em;
+    }
+  }
+}
+
+.site-nav .site-nav-item {
+  position: relative;
+	display: block;
+  width: 25%;
+  padding: 0.75em 1.5em;
+  margin-bottom: 0;
+  border-bottom: 0;
+  z-index: 10;
+  transition: background-color 0.35s ease-in-out;
+  will-change: background-color;
+
+  @for $i from 2 through $nav-item-count + 1 {
+    &:nth-child(#{$i}).is-active ~ .active-nav-item,
+    &:nth-child(#{$i}):hover ~ div.active-nav-item,
+    &:nth-child(#{$i}):focus ~ div.active-nav-item {
+      transform: translateX(($i - 2) * 100%);
+    }
+  }
+
+  @include up-to(m) {
+    text-align: left;
+    border-top: 1px solid $control-light;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+    transition-delay: 0.1s;
+    will-change: opacity;
+
+    .cb-hack:checked + & {
+      opacity: 1;
+      transition-delay: 0;
+    }
+
+    &:first-of-type {
+      border-top: none;
+    }
+
+    &.is-active {
+      font-weight: bold;
+    }
+  }
+
+  @include at-least(m) {
+    padding: 0.75em 0;
+
+    .label {
+      position: absolute;
+      top: 0.75em;
+      left: 0;
+      right: 0;
+      bottom: 1.5em;
+      transform: translateY(1.5em);
+      opacity: 0;
+      color: $highlight;
+      pointer-events: none;
+    }
+
+    [data-icon],
+    .label {
+      transition: transform 0.35s ease-in-out, opacity 0.35s ease-in-out, color 0.35s ease-in-out;
+      will-change: opacity, transform;
+    }
+
+    &.is-active,
+    &:hover,
+    &:focus {
+      [data-icon] {
+        opacity: 0;
+      }
+
+      .label {
+        transform: translateY(0);
+        color: #fff;
+        opacity: 1;
+
+        .project-page & {
+          color: $highlight;
+        }
+      }
+    }
+
+    &.is-active {
+      background-color: rgba($highlight, 0.5);
+      border-radius: 5px;
+      transition: background-color 0.25s ease-in-out 0.25s, color 0.25s ease-in-out;
+      will-change: background-color, color;
+    }
+  }
+}
+
+.site-nav:hover .site-nav-item {
+  @include at-least(m) {
+    transition: none;
+  }
+}
+
+.active-nav-item {
+  @include at-least(m) {
+    position: absolute;
+		top: 0;
+		left: 0;
+    height: 3em;
+		width: 25%;
+    background-color: $highlight;
+    border-radius: 5px;
+    pointer-events: none;
+		transition: transform 0.35s ease-in-out;
+		will-change: transform;
+    z-index: 5;
+
+    .project-page & {
+      background-color: $main;
+    }
+  }
+}
+
+.menu-toggle {
+  margin-bottom: 1.5em;
+  text-align: left;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: none;
+
+  label {
+    display: block;
+    cursor: pointer;
+  }
+
+  a {
+    padding: 0.75em 1.5em;
+    border-bottom: 0;
+  }
+
+  @include at-least(m) {
+    display: none;
+  }
+}

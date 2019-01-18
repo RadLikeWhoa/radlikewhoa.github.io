@@ -1,0 +1,141 @@
+pre,
+code {
+  margin-bottom: 2em;
+  font-size: 0.75em;
+  font-family: Source Code Pro, Consolas, Lucida Console, Monaco, monospace;
+  line-height: 2;
+}
+
+code {
+  padding: 0.1em 0.25em;
+  color: #ccc;
+  background-color: $code;
+  border: 1px solid rgba(darken($code, 10%), 0.3);
+  border-radius: 3px;
+
+  pre & {
+    padding: 0;
+    font-size: 1em;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+  }
+}
+
+div.gatsby-highlight {
+  @extend %wide-bordered;
+
+  position: relative;
+  margin-bottom: 1.5em;
+  box-shadow: 0 2px 4px rgba($default, 0.075);
+  border: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1.5em;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  &::before {
+    left: 0;
+    background-image: linear-gradient(to right, $code, rgba($code, 0));
+    border-radius: 3px 0 0 3px;
+  }
+
+  &::after {
+    right: 0;
+    background-image: linear-gradient(to left, $code, rgba($code, 0));
+    border-radius: 0 3px 3px 0;
+  }
+
+  pre {
+    padding: 2em;
+    margin-bottom: 0;
+    background-color: $code;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @include at-least(m) {
+      border-radius: 3px;
+    }
+  }
+
+	.token.comment,
+	.token.block-comment,
+	.token.prolog,
+	.token.doctype,
+	.token.cdata {
+		color: #999;
+	}
+
+	.token.punctuation {
+		color: #ccc;
+	}
+
+	.token.tag,
+	.token.attr-name,
+	.token.namespace,
+	.token.deleted {
+		color: #e2777a;
+	}
+
+	.token.function-name {
+		color: #6196cc;
+	}
+
+	.token.boolean,
+	.token.number,
+	.token.function {
+		color: #f08d49;
+	}
+
+	.token.property,
+	.token.class-name,
+	.token.constant,
+	.token.symbol {
+		color: #f8c555;
+	}
+
+	.token.selector,
+	.token.important,
+	.token.atrule,
+	.token.keyword,
+	.token.builtin {
+		color: #cc99cd;
+	}
+
+	.token.string,
+	.token.char,
+	.token.attr-value,
+	.token.regex,
+	.token.variable {
+		color: #7ec699;
+	}
+
+	.token.operator,
+	.token.entity,
+	.token.url {
+		color: #67cdcc;
+	}
+
+	.token.important,
+	.token.bold {
+		font-weight: bold;
+	}
+	.token.italic {
+		font-style: italic;
+	}
+
+	.token.entity {
+		cursor: help;
+	}
+
+	.token.inserted {
+		color: green;
+	}
+}

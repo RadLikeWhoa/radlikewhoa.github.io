@@ -1,0 +1,28 @@
+.social-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+$networks:
+  "Dribbble" #ea4c89,
+  "Pinboard" #4c4cbf,
+  "GitHub" #4183c4,
+  "Twitter" #55acee,
+  "Instagram" #4a85b5,
+  "last.fm" #cc4e56;
+
+@each $network in $networks {
+  .social-item [title="#{nth($network, 1)}"] {
+    background-color: nth($network, 2);
+
+    &:hover,
+    &:focus {
+      background-color: darken(nth($network, 2), 10%);
+    }
+
+    &::before,
+    &::after {
+      border-color: nth($network, 2);
+    }
+  }
+}

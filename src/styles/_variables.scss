@@ -1,0 +1,28 @@
+$rem-fallback: 16px;
+
+$default: #333;
+$highlight: #e95e7a;
+$main: #faf0e1;
+$code: #1d1f21;
+$warning: #fa3232;
+$info: adjust-hue($warning, -150deg);
+$share: adjust-hue($warning, -240deg);
+$footer: #444;
+$control-light: darken($main, 6%);
+$control-dark: darken($footer, 10%);
+
+$nav-item-count: 4;
+
+$media-queries: (
+  's': 30em,
+  'm': 45em,
+  'l': 60em,
+  'xl': 70em
+);
+
+$column-prefixes: (
+  'M': '(min-width: #{map-get($media-queries, "m")})',
+  'L': '(min-width: #{map-get($media-queries, "l")})'
+);
+
+$columns: 2, 3, 4, 5;

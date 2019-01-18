@@ -1,0 +1,49 @@
+* {
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+pre,
+figure {
+	margin-top: 0;
+	margin-bottom: 1.5em;
+}
+
+body {
+	margin: 0;
+  color: $default;
+	background-color: #faf0e1;
+}
+
+.wrap {
+  max-width: 40em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-main {
+	padding: 0 3em 3em;
+}
+
+.site-intro {
+  margin-bottom: 0;
+}
+
+.home-section {
+  margin-bottom: 3em;
+
+  &:last-child {
+    margin-bottom: 1.5em;
+  }
+}
+
+.section-heading {
+  padding-bottom: 0.221em;
+  margin-bottom: 0.882em;
+	border-bottom: 5px solid;
+}
