@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import Footer from './footer'
 
-const Layout = ({ children, headerClassName }) => (
+const Layout = ({ children, alternate, highlightColor }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -18,11 +18,11 @@ const Layout = ({ children, headerClassName }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} className={headerClassName} />
+        <Header siteTitle={data.site.siteMetadata.title} alternate={alternate} highlightColor={highlightColor} />
         <main className="site-main">
           {children}
-					<Footer />
         </main>
+        <Footer />
       </>
     )}
   />
@@ -30,6 +30,13 @@ const Layout = ({ children, headerClassName }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  alternate: PropTypes.bool,
+  highlightColor: PropTypes.string
+}
+
+Layout.defaultProps = {
+  alternate: false,
+  highlightColor: '#fff'
 }
 
 export default Layout

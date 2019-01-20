@@ -41,7 +41,7 @@
   display: block;
   border-bottom: 0;
   border-radius: 5px;
-	box-shadow: 0 5px 10px rgba($default, 0.35);
+  box-shadow: 0 5px 10px rgba($default, 0.35);
   will-change: transform, box-shadow;
 }
 
@@ -111,7 +111,7 @@
 
 .project-header {
   padding: 9em 3em 1.5em;
-	margin: -9em -3em 0 -3em;
+  margin: -9em -3em 0 -3em;
   color: $main;
   border-top: 1px solid rgba(#fff, 0.35);
   animation: none;
@@ -132,15 +132,15 @@
 
 .project-meta {
   position: relative;
-	display: block;
+  display: block;
   margin-bottom: 1.5em;
   background-color: lighten($main, 3%);
   border: 1px solid #e5e5e5;
   border-radius: 3px;
 
-	[data-col] {
-		float: left;
-	}
+  [data-col] {
+    float: left;
+  }
 }
 
 .project-meta-item {
@@ -194,19 +194,19 @@
   margin-bottom: 1em;
   flex-flow: row wrap;
 
-	.tag {
-		display: block;
-		flex: 1 0 auto;
-	  padding: 0.25em 0.75em;
-	  margin-right: 0.5em;
-		margin-bottom: 0.5em;
-		text-align: center;
-	  background-color: $control-light;
-	  border-radius: 5px;
-	  vertical-align: top;
+  .tag {
+    display: block;
+    flex: 1 0 auto;
+    padding: 0.25em 0.75em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    background-color: $control-light;
+    border-radius: 5px;
+    vertical-align: top;
 
-	  &:first-child {
-	    margin-left: 0;
-	  }
-	}
+    &:first-child {
+      margin-left: 0;
+    }
+  }
 }

@@ -5,8 +5,7 @@ path: "/articles/jekyll-rouge"
 teaser: "Many blogs on the web are centred around code so syntax highlighting in code blocks is useful to help readers better understand the displayed code. Jekyll offers easy ways to integrate highlighting into the build chain, for example using Rouge."
 ---
 
-You can now use Rouge in combination with Jekyll on GitHub pages natively. See [the last section](#using-rouge-in-jekyll-3-on-github-pages) of this article for more details.
-{: data-block="info" }
+<p data-block="info">You can now use Rouge in combination with Jekyll on GitHub pages natively. See <a href="#using-rouge-in-jekyll-3-on-github-pages">the last section</a> of this article for more details.</p>
 
 Code, no matter what language it is in, can be complicated to read. That's why many blogs use syntax highlighting on their code blocks to help their readers better understand the displayed code.
 

@@ -13,7 +13,7 @@ export default function Template({
 
   return (
 		<Layout>
-			<SEO />
+			<SEO title={frontmatter.title} />
 			<article class="post-full wrap hentry">
 		    {/* <a class="include" href="#author"></a> */}
 		    <h2 class="h1 post-title entry-title">{frontmatter.title}</h2>

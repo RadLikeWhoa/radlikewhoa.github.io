@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -11,7 +11,7 @@ class Index extends React.Component {
 
     return (
       <Layout>
-        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <SEO title="Home" />
     		<section className="home-section wrap">
     		  <p className="site-intro hero-text">Hi there, my name is Sacha Schmid and I am a front-end developer. I design and build websites and applications using modern technologies and methodologies.</p>
     		</section>

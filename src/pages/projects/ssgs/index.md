@@ -33,6 +33,6 @@ Putting the project on GitHub was the next step. It was an interesting process, 
 
 # Technologies I've used
 
-It's a relatively simple project. The biggest part of it is the SCSS code. Version 1 didn't rely on many features of CSS and could've been implemented in basic CSS as well.
+It's a relatively simple project. The biggest part of it is the SCSS code. Version 1 didn't rely on many features of SCSS and could've been implemented in basic CSS as well.
 
 However, version 2 took things a step further. I started using loops, conditionals, extends, etc. and while the codebase turned more and more complex, SSGS became more and more powerful. In fact, I'm using a slightly modified version of SSGS on this site.

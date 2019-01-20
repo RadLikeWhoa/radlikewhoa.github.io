@@ -9,14 +9,14 @@ export default function Template({
   data
 }) {
   const { markdownRemark, site } = data
-  const { frontmatter, html } = markdownRemark
+  const { frontmatter, html, reference } = markdownRemark
 	const { url } = site.siteMetadata
 
 	const start = +frontmatter.date.split(' ').slice(-1).pop()
 
   return (
-		<Layout headerClassName="project-page">
-			<SEO />
+		<Layout alternate={true} highlightColor={frontmatter.background}>
+			<SEO title={frontmatter.title} />
 			<div className="project-header" data-pattern={frontmatter.pattern} style={{ backgroundColor: frontmatter.background }}>
 		    <div className="wrap">
 		      <h2 className="h1 post-title">{frontmatter.title}</h2>
@@ -37,7 +37,7 @@ export default function Template({
 		        <div data-col="3-4 M1-2">
 		          <div className="project-meta-body small">
 								{!frontmatter.end && 'since'}
-								<time pubdate>{start}</time>{frontmatter.end && frontmatter.end !== start && ` – ${frontmatter.end}`}
+								<time pubdate={start}>{start}</time>{frontmatter.end && frontmatter.end !== start && ` – ${frontmatter.end}`}
 		          </div>
 		        </div>
 		      </div>
