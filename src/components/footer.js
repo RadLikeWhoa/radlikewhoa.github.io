@@ -37,23 +37,7 @@ const scrollToTop = e => {
 const Footer = () => (
   <footer className="site-footer">
     <div className="wrap">
-      <div data-grid>
-        <div data-col="1-2">
-          <a href="/feed.xml" data-button="block dark" title="RSS feed for all articles on this site">
-            <span data-icon="rss"></span><span className="label opt-label">RSS</span>
-          </a>
-        </div>
-        <div data-col="1-2">
-          <a href="https://github.com/RadLikeWhoa/radlikewhoa.github.io" data-button="block dark" title="GitHub repository for this site">
-            <span data-icon="github"></span><span className="label opt-label">GitHub</span>
-          </a>
-        </div>
-        <div data-col>
-          <a href="#top" id="topLink" data-button="center dark" onClick={scrollToTop}>
-            <span className="label">Back to top</span>
-          </a>
-        </div>
-      </div>
+      Copyright © 2013 – {new Date().getFullYear()}
     </div>
   </footer>
 )

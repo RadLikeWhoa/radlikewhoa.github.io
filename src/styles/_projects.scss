@@ -186,6 +186,20 @@
   }
 }
 
+.project-inline {
+  [data-grid] {
+    align-items: center;
+  }
+
+  [data-tags] {
+    margin-bottom: 0;
+
+    .tag {
+      margin-bottom: 0;
+    }
+  }
+}
+
 [data-tags] {
   @extend %unstyled-list;
 

@@ -96,7 +96,7 @@
 .menu-toggle {
   @include up-to(m) {
     color: $highlight;
-    background-color: #fff;
+    background-color: $main;
     transition: background-color 0.25s ease-in-out;
     will-change: background-color;
 
@@ -114,7 +114,7 @@
 
     &:hover,
     &:focus {
-      background-color: darken(#fff, 3%);
+      background-color: darken($main, 3%);
     }
 
     [data-icon] {
@@ -195,7 +195,7 @@
 
       .label {
         transform: translateY(0);
-        color: #fff;
+        color: $main;
         opacity: 1;
 
         .is-alternate & {

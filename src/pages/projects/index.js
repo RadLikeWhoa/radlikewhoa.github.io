@@ -39,7 +39,7 @@ class Projects extends React.Component {
 						const start = +node.frontmatter.date.split('.').splice(-1).pop()
 
 						return (
-							<article className="post-inline">
+							<article className="post-inline project-inline">
 							  <div data-grid>
 							    <div data-col="M1-3">
 							      <a href={node.frontmatter.path} className="project-link">
@@ -54,7 +54,6 @@ class Projects extends React.Component {
 										<ul data-tags>
 											{node.frontmatter.tags.map(tag => <li className="tag">{tag}</li>)}
 										</ul>
-							      <a href={node.frontmatter.path}>Read more &raquo;</a>
 							    </div>
 							  </div>
 							</article>

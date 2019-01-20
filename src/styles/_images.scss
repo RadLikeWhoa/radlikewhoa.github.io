@@ -2,20 +2,24 @@ figure {
   position: relative;
   margin-left: -1.5em;
   margin-right: -1.5em;
-}
 
-figure img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 1.5em;
-  border-radius: 3px;
-  border: 1px solid #e5e5e5;
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1.5em;
+    border-radius: 3px;
+    border: 1px solid #e5e5e5;
 
-  @include up-to(m) {
-    border-right: 0;
-    border-left: 0;
-    border-radius: 0;
+    @include up-to(m) {
+      border-right: 0;
+      border-left: 0;
+      border-radius: 0;
+    }
+  }
+
+  .gatsby-resp-image-background-image {
+    border-radius: 3px;
   }
 }
 

@@ -13,7 +13,7 @@ class Index extends React.Component {
       <Layout>
         <SEO title="Home" />
     		<section className="home-section wrap">
-    		  <p className="site-intro hero-text">Hi there, my name is Sacha Schmid and I am a front-end developer. I design and build websites and applications using modern technologies and methodologies.</p>
+    		  <p className="site-intro hero-text">Hi there, my name is <b>Sacha Schmid</b> and I am a front-end developer. I design and build websites and applications using modern technologies and methodologies.</p>
     		</section>
     		<section className="home-section alt-section">
     		  <div className="wrap">
@@ -29,8 +29,8 @@ class Index extends React.Component {
     					})}
             </div>
             <p>This is a selection of some of my latest projects. You can read a detailed case study on all of them or you can check out a list of all my past and current projects.</p>
-            <div className="">
-        			<Link to="/projects" data-button>
+            <div className="button-wrapper">
+        			<Link to="/projects" data-button="dark">
         				<span className="label">View more projects</span>
         			</Link>
             </div>

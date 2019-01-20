@@ -44,7 +44,7 @@ We went on to collect a list of basic emotions that a movie might make you feel.
 
 <figure>
   <img src="search.png">
-  <figcaption data-marginalia="right">Search functionality is using <abbr title="The Movie Database">TMDB</abbr> data. Movies are only added to our own database if they are not already present.</figcaption>
+  <figcaption data-marginalia="right">Search functionality using <abbr title="The Movie Database">TMDB</abbr> data. Movies are only added to our own database if they are not already present.</figcaption>
 </figure>
 
 All movies are added by the users. They can search for a movie by its name and then save a rating for it. If the movie is already present in the database only the rating is saved, otherwise all the necessary details for the movie are saved as well. All data is pulled from The Movie Database.

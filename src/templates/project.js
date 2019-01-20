@@ -123,9 +123,11 @@ export default function Template({
 					{frontmatter.link && (<>You should also take a look at the project's <a href={frontmatter.link}>website</a>, if you haven't already.</>)}
 					For comments and questions, <a href="mailto:hello@sacha.me">contact me through e-mail</a>.
 		    </p>
-		    <Link to="/projects" data-button="center">
-		      <span className="label">View more projects</span>
-		    </Link>
+        <div className="text-center">
+  		    <Link to="/projects" data-button>
+  		      <span className="label">View more projects</span>
+  		    </Link>
+        </div>
 		  </article>
 		</Layout>
   )

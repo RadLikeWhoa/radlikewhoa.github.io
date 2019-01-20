@@ -17,7 +17,7 @@ figure {
 body {
   margin: 0;
   color: $default;
-  background-color: #faf0e1;
+  background-color: $main;
 }
 
 .wrap {
@@ -43,9 +43,10 @@ body {
 }
 
 .alt-section {
-  padding: 0 1.5em 1.5em;
-  margin: 6em -3em 3em;
+  padding: 0 1.5em 2em;
+  margin: 6em -3em 4em;
   color: $main;
+  text-align: center;
   background-color: $highlight;
 
   [data-col] {
@@ -53,19 +54,13 @@ body {
   }
 
   [data-button] {
-    color: $highlight;
-    background-color: $main;
-
-    &:hover,
-    &:focus {
-      background-color: darken($main, 5%);
-    }
-
-    &::after,
-    &::before {
-      border-color: $main;
-    }
+    box-shadow: 0 5px 10px rgba($default, 0.35);
   }
+}
+
+.button-wrapper {
+  margin-bottom: -3.5em;
+  text-align: center;
 }
 
 .section-heading {
