@@ -13,4 +13,5 @@ background: rgb(50, 213, 120)
 client: Die Medienmacher AG
 team: 5
 icon: icon.svg
+teaser: "A complete rebranding of the company required a new visual identity along with a new corporate website. The new site shows the company on a more human level and focuses on select key showcases."
 ---

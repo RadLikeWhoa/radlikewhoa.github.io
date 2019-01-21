@@ -70,8 +70,6 @@
 
 [data-pattern="argyle"] {
   background-image:
-    repeating-linear-gradient(120deg, rgba(#fff, 0.05), rgba(#fff, 0.05) 1px, transparent 1px, transparent 60px),
-    repeating-linear-gradient(60deg, rgba(#fff, 0.05), rgba(#fff, 0.05) 1px, transparent 1px, transparent 60px),
     linear-gradient(60deg, rgba(#000, 0.05) 25%, transparent 25%, transparent 75%, rgba(#000, 0.05) 75%, rgba(#000, 0.05)),
     linear-gradient(120deg, rgba(#000, 0.05) 25%, transparent 25%, transparent 75%, rgba(#000, 0.05) 75%, rgba(#000, 0.05));
   background-size: 70px 120px;

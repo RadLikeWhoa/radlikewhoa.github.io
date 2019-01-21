@@ -3,7 +3,7 @@ title: Wolfswood Companion
 date: 2016-04-01
 path: /projects/wolfswood-companion
 tags:
-  - iOS
+  - Native
   - App
   - Swift
 learned:

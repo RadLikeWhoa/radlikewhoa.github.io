@@ -6,6 +6,7 @@ tags:
   - Web
   - App
   - React
+  - Haskell
 learned:
   - Design
   - Development

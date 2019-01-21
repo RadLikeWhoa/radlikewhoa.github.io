@@ -3,7 +3,7 @@ title: Count!
 date: 2017-02-01
 path: /projects/count
 tags:
-  - iOS
+  - Native
   - App
   - Swift
 learned:
