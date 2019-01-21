@@ -1,31 +1,8 @@
 .site-footer {
   padding: 1.5em 0;
-  margin-top: -1.5em;
-  text-align: center;
-  background-color: darken($main, 5%);
+  margin-top: -3em;
 
-  [data-grid] {
-    flex-wrap: wrap;
-  }
-
-  [data-button] {
-    margin-bottom: 1.5em;
-
-    @include up-to(m) {
-      text-align: center;
-    }
-  }
-
-  [data-icon] {
-    @include at-least(m) {
-      float: right;
-      padding-top: 0.25em;
-    }
-  }
-}
-
-.opt-label {
-  @include up-to(m) {
-    display: none;
+  [data-col]:last-child {
+    text-align: right;
   }
 }

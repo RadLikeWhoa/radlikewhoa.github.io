@@ -9,7 +9,7 @@ export default function Template({
   data
 }) {
   const { markdownRemark, site } = data
-  const { frontmatter, html, reference } = markdownRemark
+  const { frontmatter, html } = markdownRemark
 	const { url } = site.siteMetadata
 
 	const start = +frontmatter.date.split(' ').slice(-1).pop()

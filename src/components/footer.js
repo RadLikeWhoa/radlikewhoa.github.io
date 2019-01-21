@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import React from 'react'
 
 const scrollToTop = e => {
@@ -37,7 +36,10 @@ const scrollToTop = e => {
 const Footer = () => (
   <footer className="site-footer">
     <div className="wrap">
-      Copyright © 2013 – {new Date().getFullYear()}
+      <div data-grid>
+        <div data-col="M1-2"><a href="/feed.xml">RSS</a> · <a href="https://github.com/RadLikeWhoa/radlikewhoa.github.io" target="_blank" rel="noreferrer noopener">GitHub</a></div>
+        <div data-col="M1-2"><a href="#top" onClick={scrollToTop}>Back to top</a></div>
+      </div>
     </div>
   </footer>
 )

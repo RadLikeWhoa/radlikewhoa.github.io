@@ -184,6 +184,10 @@
 
     max-width: 100%;
   }
+
+  &.full {
+    white-space: normal;
+  }
 }
 
 .project-inline {
@@ -218,9 +222,19 @@
     background-color: $control-light;
     border-radius: 5px;
     vertical-align: top;
+    transition:
+      background-color 0.25s ease-in-out,
+      box-shadow 0.25s ease-in-out;
+    cursor: pointer;
 
     &:first-child {
       margin-left: 0;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: darken($control-light, 10%);
+      box-shadow: 0 2px 3px rgba($default, 0.15);
     }
   }
 }

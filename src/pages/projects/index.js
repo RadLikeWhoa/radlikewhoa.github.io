@@ -15,7 +15,7 @@ class Projects extends React.Component {
 
 		const platforms = [ 'Web', 'iOS' ]
 		const types = [ 'App', 'Site', 'Library', 'Game' ]
-  	const tools = [ 'Swift', 'Haskell', 'JavaScript', 'Node.js', 'PHP', 'HTML', 'Sass', 'React', 'Angular.js', 'Wordpress' ]
+  	const tools = [ 'Swift', 'Haskell', 'JavaScript', 'Node.js', 'PHP', 'HTML', 'Sass', 'React', 'Angular', 'Wordpress' ]
 
 		return (
 		  <Layout>
@@ -52,7 +52,7 @@ class Projects extends React.Component {
 							        <p><span className="faded">{!node.frontmatter.end && 'since '}{start}{node.frontmatter.end && node.frontmatter.end !== start && `– ${node.frontmatter.end}`} —</span> {node.frontmatter.teaser}</p>
 							      </div>
 										<ul data-tags>
-											{node.frontmatter.tags.map(tag => <li className="tag">{tag}</li>)}
+											{node.frontmatter.tags.map(tag => <li className="tag" onClick={() => this.setState({ filter: filter === tag ? '' : tag })}>{tag}</li>)}
 										</ul>
 							    </div>
 							  </div>

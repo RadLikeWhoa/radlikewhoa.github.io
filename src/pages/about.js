@@ -29,17 +29,34 @@ const About = () => (
 	      </li>
 	    </ul>
 	    <p>In 2017, I graduated from <a href="https://fhnw.ch/en/">University of Applied Sciences and Arts Northwestern Switzerland</a> in Brugg, Switzerland, majoring in Computer Science.</p>
+      <div className="about-meta">
+        <div className="small faded">2017</div>
+        <div className="full small">
+          Bachelor of Science FHNW in Computer Sciences with a specialisation in Design and Management<br />
+          <span className="faded">Brugg-Windisch, Switzerland</span>
+        </div>
+      </div>
+      <div className="about-meta">
+        <div className="small faded">2013</div>
+        <div className="full small">
+          Federal Diploma of Vocational Education and Training<br />
+          <span className="faded">Basel, Switzerland</span>
+        </div>
+      </div>
 	    <p>I have gathered experience in various aspects of front-end development and project management while working with companies and private clients alike, as well as a multitude of projects at university. You can see some of that work on my <Link to="/projects">Projects</Link> page.</p>
-	    <ul data-tags="full">
-	      <li className="tag">UI Design</li>
-	      <li className="tag">Web Development</li>
-	      <li className="tag">Native Development</li>
-	      <li className="tag">Interaction Design</li>
-	      <li className="tag">Project Management</li>
-	      <li className="tag">Software Architecture</li>
-	    </ul>
+      <div className="about-meta">
+        <div className="small faded">Familiar Topics</div>
+        <div className="full small">UI Design, UX Design, Web Development, Native Development, Interaction Design, Project Management, Software Architecture</div>
+      </div>
 	    <p>I keep up to date with the latest trends and the rapid evolution of languages and tools as much as possible, trying out new technologies on projects all the time. This interest in the industry allows me to create websites and applications that not only build on foundational principles of design, but also use cutting-edge technology.</p>
-	    <p>I mainly work with HTML, CSS, and JavaScript. I like working with React, Redux, and similar technologies, but I am also familiar with frameworks like Angular. Apart from web languages, I have also worked with C#, Java, Haskell, and Swift.</p>
+      <div className="about-meta">
+        <div className="small faded">Languages</div>
+        <div className="full small">HTML, CSS, JavaScript, .NET C#, Haskell, Swift, Java, PHP</div>
+      </div>
+      <div className="about-meta">
+        <div className="small faded">Tools & Frameworks</div>
+        <div className="full small">React, Redux, Angular, Ionic, Sass, Wordpress, Neos CMS</div>
+      </div>
 	    <p>Other than the web, I am very passionate about music, both listening to my favourite records and creating music with my guitars. Whenever I can, I like to go to concerts and festivals and just enjoy the music and the people around me.</p>
 	  </section>
 	  <section className="home-section wrap">

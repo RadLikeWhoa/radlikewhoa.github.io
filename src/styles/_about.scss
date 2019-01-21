@@ -5,32 +5,16 @@
   border-radius: 5px;
 }
 
-.sg-section {
-  margin-bottom: 1.5em;
-
-  &:last-child {
-    margin-bottom: -1.5em;
-  }
-}
-
-.styleguide [data-col] {
-  margin-bottom: 1.5em;
-}
-
-.styleguide [data-tags] {
-  margin-bottom: 2.5em;
-}
-
-.sg-tag {
-  display: block;
+.about-meta {
   padding: 0.75em;
-  text-align: center;
-  background-color: $control-light;
-  border-radius: 5px;
-}
+  border: 1px solid #e5e5e5;
+  background-color: lighten($main, 3%);
 
-.sg-label {
-  display: block;
-  margin-top: 0.5em;
-  text-align: center;
+  + .about-meta {
+    border-top: 0;
+  }
+
+  + p {
+    margin-top: 1.5em;
+  }
 }
