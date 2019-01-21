@@ -3,7 +3,7 @@ import React from 'react'
 const scrollToTop = e => {
   let position = window.pageYOffset
   let time = 0
-  let raf, percentage
+  let percentage
 
   e.preventDefault()
 
@@ -26,11 +26,11 @@ const scrollToTop = e => {
     window.scrollTo(0, Math.floor(position))
 
     if (position > 0) {
-      raf = requestAnimationFrame(scroll)
+      requestAnimationFrame(scroll)
     }
   }
 
-  raf = requestAnimationFrame(scroll)
+  requestAnimationFrame(scroll)
 }
 
 const Footer = () => (
