@@ -9,8 +9,8 @@ tags:
 learned:
 technologies:
 pattern: argyle
-background: rgb(27, 140, 84)
+background: rgb(139, 130, 126)
 client: Die Medienmacher AG
-team: 2
+team: 3
 icon: icon.svg
 ---
