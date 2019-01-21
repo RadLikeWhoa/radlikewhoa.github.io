@@ -17,11 +17,8 @@
     box-shadow: 0 2px 4px rgba($default, 0.35);
     z-index: 100;
     transform: translateX(-120%);
+    transition: transform 0.25s ease-in-out;
     will-change: transform;
-
-    .has-transitions & {
-      transition: transform 0.25s ease-in-out;
-    }
 
     &.is-overlaid {
       transform: translateX(0);
@@ -56,10 +53,7 @@
   will-change: opacity;
   z-index: 10;
   pointer-events: none;
-
-  .has-transitions & {
-    transition: opacity 0.25s ease-in-out;
-  }
+  transition: opacity 0.25s ease-in-out;
 
   .filters.is-overlaid + & {
     opacity: 1;
@@ -72,7 +66,13 @@
 }
 
 .filter-toggle {
+  margin-top: 0;
   margin-bottom: 3em;
+  font: inherit;
+  font-weight: bold;
+  text-align: left;
+  border: none;
+  appearance: none;
 
   [data-icon] {
     padding-top: 0.175em;
@@ -82,6 +82,13 @@
   @include at-least(m) {
     display: none;
   }
+}
+
+.filter-close {
+  font: inherit;
+  font-weight: bold;
+  border: none;
+  appearance: none;
 }
 
 .filter-list {

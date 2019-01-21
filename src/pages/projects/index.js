@@ -8,31 +8,33 @@ import FilterButton from '../../components/filterButton'
 
 class Projects extends React.Component {
   state = {
-    filter: ''
+    filter: '',
+    overlaid: false
   }
 
 	render() {
-    const { filter } = this.state
+    const { filter, overlaid } = this.state
 		const projects = this.props.data.allMarkdownRemark.edges.filter(p => !filter || p.node.frontmatter.tags.indexOf(filter) !== -1)
 
     const filters = {
       platform: [ 'Web', 'iOS' ],
   		type: [ 'App', 'Site', 'Library', 'Game' ],
-    	tool: [ 'Swift', 'Haskell', 'JavaScript', 'Node.js', 'PHP', 'HTML', 'Sass', 'React', 'Angular', 'Wordpress' ]
+    	tool: [ 'Swift', 'JavaScript', 'Node.js', 'PHP', 'HTML', 'Sass', 'React', 'Angular', 'Wordpress' ]
     }
 
 		return (
 		  <Layout>
 		    <SEO title="Projects" />
-				<section className="home-section wrap">
+				<section className="content-section wrap">
 					<button
             href="#"
             data-button="block"
-            className="filter-toggle">
+            className="filter-toggle"
+            onClick={() => this.setState({ overlaid: true })}>
 			      <span data-icon="list"></span>
             <span className="label">Show Filters</span>
 			    </button>
-			    <div className={`filters ${filter && 'is-filtered'}`}>
+			    <div className={`filters ${filter && 'is-filtered'} ${overlaid && 'is-overlaid'}`}>
 			      <div className="filter-list-wrapper">
 			        <ul
                 className="filter-list"
@@ -42,18 +44,19 @@ class Projects extends React.Component {
                     label={f}
                     key={f}
                     type={key}
-                    onClickFilter={() => this.setState({ filter: filter === f ? '' : f })}
+                    onClickFilter={() => this.setState({ filter: filter === f ? '' : f, overlaid: false })}
                     isActive={filter === f} />
                 )))}
 			        </ul>
 			      </div>
 			      <button
               data-button="block center"
-              className="filter-close">
+              className="filter-close"
+              onClick={() => this.setState({ overlaid: false })}>
               Close
             </button>
 			    </div>
-			    <div className="filter-shade filter-close"></div>
+			    <div className="filter-shade filter-close" onClick={() => this.setState({ overlaid: false })}></div>
 					{projects.map(({ node }) => (
             <ProjectTeaser
               project={node}

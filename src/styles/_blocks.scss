@@ -40,6 +40,10 @@
 [data-block~="share"] {
   padding: calc(90px + 1.5em) 3em 3em;
   text-align: center;
+
+  @include up-to(m) {
+    padding-top: 90px;
+  }
 }
 
 $blocks: (

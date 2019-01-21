@@ -17,7 +17,7 @@ figure {
 body {
   margin: 0;
   color: $default;
-  background-color: $main;
+  background-color: darken($main, 5%);
 }
 
 .wrap {
@@ -28,6 +28,7 @@ body {
 
 .site-main {
   padding: 0 3em 3em;
+  background-color: $main;
 
   @include up-to(l) {
     padding: 0 1.5em 3em;
@@ -38,7 +39,7 @@ body {
   margin-bottom: 0;
 }
 
-.home-section {
+.content-section {
   margin-bottom: 3em;
 
   &:last-child {
@@ -46,15 +47,48 @@ body {
   }
 }
 
+.home-section {
+  margin-bottom: 6em;
+
+  &:last-child {
+    margin-bottom: 1.5em;
+  }
+
+  @include at-least(l) {
+    margin-bottom: 7.5em;
+
+    &:first-child {
+      padding-top: 1.5em;
+    }
+
+    &:last-child {
+      margin-bottom: 2em;
+    }
+  }
+}
+
 .alt-section {
-  padding: 0 1.5em 2em;
-  margin: 6em -3em 4em;
+  padding: 0 3em 2em;
+  margin: 6em -3em 4.5em;
   color: $main;
   text-align: center;
   background-color: $highlight;
 
+  @include up-to(l) {
+    padding: 0 1.5em 2em;
+    margin: 6em -1.5em 4.5em;
+  }
+
   [data-col] {
-    margin-top: -3em;
+    @include up-to(m) {
+      &:first-child {
+        margin-top: -3em;
+      }
+    }
+
+    @include at-least(m) {
+      margin-top: -3em;
+    }
   }
 
   [data-button] {

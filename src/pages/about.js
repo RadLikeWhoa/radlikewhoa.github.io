@@ -9,7 +9,7 @@ import profile from '../images/profile.jpg'
 const About = () => (
   <Layout>
     <SEO title="About" />
-		<section className="home-section wrap">
+		<section className="content-section wrap">
 	    <div className="about-header">
 	      <div className="avatar-container">
 	        <img
@@ -78,7 +78,7 @@ const About = () => (
       </div>
 	    <p>Other than the web, I am very passionate about music, both listening to my favourite records and creating music with my guitars. Whenever I can, I like to go to concerts and festivals and just enjoy the music and the people around me.</p>
 	  </section>
-	  <section className="home-section wrap">
+	  <section className="content-section wrap">
 	    <h2 className="section-heading">About This Site</h2>
 	    <p>This website was created with <a href="http://gatsbyjs.org">GatsbyJS</a>. <a href="https://www.entypo.com">Entypo Icons</a> are used throughout the site with iconfonts created through <a href="https://icomoon.io">icomoon</a>. The site is hosted on <a href="https://pages.github.com">GitHub Pages</a>. You can also view the site's source <a href="https://github.com/RadLikeWhoa/radlikewhoa.github.io">on GitHub</a>.</p>
 	    <p>All content, unless otherwise noted, was created by Sacha Schmid. Copyright © 2013 – {new Date().getFullYear()}.</p>

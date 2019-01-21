@@ -40,7 +40,7 @@ $gutters: 1.5em !default;
 }
 
 [data-#{$grid-namespace}] {
-  display: flex;
+  display: block;
   margin-left: -$gutters;
 
   &::after {
@@ -48,10 +48,6 @@ $gutters: 1.5em !default;
     display: table;
     clear: both;
   }
-}
-
-[data-#{$grid-namespace}~="rev"] {
-	flex-direction: column-reverse;
 }
 
 [data-#{$grid-namespace}~="gutterless"] {
@@ -62,10 +58,15 @@ $gutters: 1.5em !default;
   position: relative;
   display: block;
   width: 100%;
+  float: left;
   padding-left: $gutters;
 
   [data-#{$grid-namespace}~="gutterless"] & {
     padding-left: 0;
+  }
+
+  [data-#{$grid-namespace}~="rev"] & {
+  	float: right;
   }
 }
 

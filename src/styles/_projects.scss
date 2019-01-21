@@ -1,5 +1,11 @@
 .project-overview {
-  margin-bottom: 1.5em;
+  @include up-to(m) {
+    flex-wrap: wrap;
+  }
+
+  @include at-least(m) {
+    margin-bottom: 1.5em;
+  }
 }
 
 .icon-well {
@@ -28,13 +34,13 @@
   }
 
   @include at-least(m) {
-    height: 15.5em;
+    height: 12.5em;
     margin-bottom: 0;
   }
 }
 
-.post-inline:nth-child(odd) [data-grid] {
-  flex-direction: row-reverse;
+.post-inline:nth-child(odd) [data-col] {
+  float: right;
 }
 
 .project-link {
@@ -134,15 +140,10 @@
 
 .project-meta {
   position: relative;
-  display: block;
   margin-bottom: 1.5em;
   background-color: lighten($main, 3%);
   border: 1px solid #e5e5e5;
   border-radius: 3px;
-
-  [data-col] {
-    float: left;
-  }
 }
 
 .project-meta-item {

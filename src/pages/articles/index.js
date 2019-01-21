@@ -11,7 +11,7 @@ class Articles extends React.Component {
 		return (
 			<Layout>
 				<SEO title="Articles" />
-				<section className="home-section wrap">
+				<section className="content-section wrap">
 					{articles.map(({ node }) => (
 						<article class="post-archive hentry">
 				      <h3 class="post-title entry-title">

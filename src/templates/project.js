@@ -166,7 +166,7 @@ export default function Template({
         <div className="text-center">
   		    <Link
             to="/projects"
-            data-button>
+            data-button="dark">
   		      <span className="label">View more projects</span>
   		    </Link>
         </div>

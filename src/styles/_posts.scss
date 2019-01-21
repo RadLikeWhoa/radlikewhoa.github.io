@@ -24,6 +24,14 @@
     font-weight: bold;
     margin-right: 0.25em;
   }
+
+  [data-block~="share"] + .text-center {
+    margin-top: -3em;
+
+    [data-button] {
+      box-shadow: 0 5px 10px rgba($default, 0.35);
+    }
+  }
 }
 
 .post-inline,
