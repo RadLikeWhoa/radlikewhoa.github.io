@@ -33,7 +33,9 @@ export default function Template({
 					If you enjoyed reading this article you might want to share it <a href={`https://twitter.com/intent/tweet?url=${url}${frontmatter.path}&amp;text=${frontmatter.title}`}>on Twitter</a>, <a href={`https://facebook.com/sharer.php?u=${url}${frontmatter.path}`}>on Facebook</a>, or <a href={`https://pinboard.in/add?next=same&amp;url=${url}${frontmatter.path}&amp;title=${frontmatter.title}`}>on Pinboard</a>.
 					For comments and questions, <a href="mailto:hello@sacha.me">contact me through e-mail</a>.
 		    </p>
-				<Link to="/articles" data-button="center">
+				<Link
+          to="/articles"
+          data-button="center">
 					<span class="label">View more articles</span>
 		    </Link>
 		  </article>

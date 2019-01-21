@@ -18,7 +18,10 @@ const Layout = ({ children, alternate, highlightColor }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} alternate={alternate} highlightColor={highlightColor} />
+        <Header
+          siteTitle={data.site.siteMetadata.title}
+          alternate={alternate}
+          highlightColor={highlightColor} />
         <main className="site-main">
           {children}
         </main>

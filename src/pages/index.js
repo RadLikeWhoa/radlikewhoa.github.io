@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import IconWell from '../components/iconWell'
 
 class Index extends React.Component {
   render() {
@@ -17,16 +18,19 @@ class Index extends React.Component {
     		</section>
     		<section className="home-section alt-section">
     		  <div className="wrap">
-            <div className="project-overview" data-grid>
-              {projects.map(({ node }) => {
-    						return (
-                  <div data-col="M1-3">
-                    <a href={node.frontmatter.path} className="project-link">
-                      <div className="icon-well" data-pattern={node.frontmatter.pattern} style={{ backgroundColor: node.frontmatter.background }}><img src={node.frontmatter.icon.publicURL} alt={`${node.frontmatter.title} icon`} /></div>
-                    </a>
-                  </div>
-    						)
-    					})}
+            <div
+              className="project-overview"
+              data-grid>
+              {projects.map(({ node }) => (
+                <div data-col="M1-3">
+                  <IconWell
+                    title={node.frontmatter.title}
+                    path={node.frontmatter.path}
+                    pattern={node.frontmatter.pattern}
+                    background={node.frontmatter.background}
+                    icon={node.frontmatter.icon.publicURL} />
+                </div>
+    					))}
             </div>
             <p>This is a selection of some of my latest projects. You can read a detailed case study on all of them or you can check out a list of all my past and current projects.</p>
             <div className="button-wrapper">
@@ -44,7 +48,9 @@ class Index extends React.Component {
 			      </h3>
             <p className="post-caption">{article.frontmatter.teaser}</p>
 			    </article>
-    			<Link to="/articles" data-button>
+    			<Link
+            to="/articles"
+            data-button>
     		    <span className="label">View more articles</span>
     		  </Link>
     		</section>

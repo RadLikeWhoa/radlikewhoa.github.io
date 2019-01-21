@@ -15,9 +15,14 @@ export default function Template({
 	const start = +frontmatter.date.split(' ').slice(-1).pop()
 
   return (
-		<Layout alternate={true} highlightColor={frontmatter.background}>
+		<Layout
+      alternate={true}
+      highlightColor={frontmatter.background}>
 			<SEO title={frontmatter.title} />
-			<div className="project-header" data-pattern={frontmatter.pattern} style={{ backgroundColor: frontmatter.background }}>
+			<div
+        className="project-header"
+        data-pattern={frontmatter.pattern}
+        style={{ backgroundColor: frontmatter.background }}>
 		    <div className="wrap">
 		      <h2 className="h1 post-title">{frontmatter.title}</h2>
 		      <p className="hero-text">{frontmatter.teaser}</p>
@@ -25,23 +30,36 @@ export default function Template({
 		  </div>
 			<article className="post-full wrap">
 		    <div className="hero-img-wrapper">
-		      <a href={frontmatter.link} target="_blank" rel="noopener noreferrer">
-            <Img sizes={frontmatter.hero.childImageSharp.sizes} className="hero-img" alt={`Impression from the ${frontmatter.title} website`} />
+		      <a
+            href={frontmatter.link}
+            target="_blank"
+            rel="noopener noreferrer">
+            <Img
+              sizes={frontmatter.hero.childImageSharp.sizes}
+              className="hero-img"
+              alt={`Impression from the ${frontmatter.title} website`} />
 		      </a>
 		    </div>
-		    <div className="project-meta" data-grid="gutterless">
-		      <div className="project-meta-item" data-col="M1-2">
+		    <div
+          className="project-meta"
+          data-grid="gutterless">
+		      <div
+            className="project-meta-item"
+            data-col="M1-2">
 		        <div data-col="1-4 M1-2">
 		          <div className="project-meta-label small faded">Years</div>
 		        </div>
 		        <div data-col="3-4 M1-2">
 		          <div className="project-meta-body small">
 								{!frontmatter.end && 'since'}
-								<time pubdate={start}>{start}</time>{frontmatter.end && frontmatter.end !== start && ` – ${frontmatter.end}`}
+								<time pubdate={start}>{start}</time>
+                {frontmatter.end && frontmatter.end !== start && ` – ${frontmatter.end}`}
 		          </div>
 		        </div>
 		      </div>
-		      <div className="project-meta-item" data-col="M1-2">
+		      <div
+            className="project-meta-item"
+            data-col="M1-2">
 		        <div data-col="1-4 M1-2">
 		          <div className="project-meta-label small faded">Team</div>
 		        </div>
@@ -52,7 +70,9 @@ export default function Template({
 		        </div>
 		      </div>
 					{frontmatter.client && (
-						<div className="project-meta-item" data-col>
+						<div
+              className="project-meta-item"
+              data-col>
 		          <div data-col="1-4">
 		            <div className="project-meta-label small faded">Client</div>
 		          </div>
@@ -62,30 +82,46 @@ export default function Template({
 		        </div>
 					)}
 					{frontmatter.repo && (
-						<div className="project-meta-item" data-col>
+						<div
+              className="project-meta-item"
+              data-col>
 		          <div data-col="1-4">
 		            <div className="project-meta-label small faded">Source</div>
 		          </div>
 		          <div data-col="3-4">
 		            <div className="project-meta-body small">
-		              <a href={frontmatter.repo} target="_blank" rel="noopener noreferrer">{frontmatter.repo}</a>
+		              <a
+                    href={frontmatter.repo}
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    {frontmatter.repo}
+                  </a>
 		            </div>
 		          </div>
 		        </div>
 					)}
 					{frontmatter.link && (
-						<div className="project-meta-item" data-col>
+						<div
+              className="project-meta-item"
+              data-col>
 		          <div data-col="1-4">
 		            <div className="project-meta-label small faded">URL</div>
 		          </div>
 		          <div data-col="3-4">
 		            <div className="project-meta-body small">
-									<a href={frontmatter.link} target="_blank" rel="noopener noreferrer">{frontmatter.link}</a>
+									<a
+                    href={frontmatter.link}
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    {frontmatter.link}
+                  </a>
 		            </div>
 		          </div>
 		        </div>
 					)}
-					<div className="project-meta-item" data-col>
+					<div
+            className="project-meta-item"
+            data-col>
 						<div data-col="1-4">
 							<div className="project-meta-label small faded">Tags</div>
 						</div>
@@ -100,8 +136,12 @@ export default function Template({
 					className="post-body"
 					dangerouslySetInnerHTML={{ __html: html }}
 				/>
-				<div className="project-meta" data-grid="gutterless">
-					<div className="project-meta-item" data-col>
+				<div
+          className="project-meta"
+          data-grid="gutterless">
+					<div
+            className="project-meta-item"
+            data-col>
 						<div data-col="1-4">
 							<div className="project-meta-label small faded">Learnings</div>
 						</div>
@@ -124,7 +164,9 @@ export default function Template({
 					For comments and questions, <a href="mailto:hello@sacha.me">contact me through e-mail</a>.
 		    </p>
         <div className="text-center">
-  		    <Link to="/projects" data-button>
+  		    <Link
+            to="/projects"
+            data-button>
   		      <span className="label">View more projects</span>
   		    </Link>
         </div>

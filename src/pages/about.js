@@ -12,19 +12,38 @@ const About = () => (
 		<section className="home-section wrap">
 	    <div className="about-header">
 	      <div className="avatar-container">
-	        <img src={profile} className="avatar" alt="Sacha Schmid" />
+	        <img
+            src={profile}
+            className="avatar"
+            alt="Sacha Schmid" />
 	      </div>
 	      <p>My name is Sacha Schmid. I'm a front-end developer from Switzerland, interested in both interface design and web development. I work at <a href="https://medienmacher.com">Die Medienmacher</a> in Muttenz, Switzerland.</p>
 	    </div>
-	    <ul className="social-list clear" data-grid>
-	      <li className="social-item" data-col="1-2">
-	        <a href="https://github.com/RadLikeWhoa" data-button="center" title="GitHub">
-	          <span className="label"><span data-icon="github"></span></span>
+	    <ul
+        className="social-list clear"
+        data-grid>
+	      <li
+          className="social-item"
+          data-col="1-2">
+	        <a
+            href="https://github.com/RadLikeWhoa"
+            data-button="center"
+            title="GitHub">
+	          <span className="label">
+              <span data-icon="github"></span>
+            </span>
 	        </a>
 	      </li>
-	      <li className="social-item" data-col="1-2">
-	        <a href="https://instagram.com/__marvolo" data-button="center" title="Instagram">
-	          <span className="label"><span data-icon="instagram"></span></span>
+	      <li
+          className="social-item"
+          data-col="1-2">
+	        <a
+            href="https://instagram.com/__marvolo"
+            data-button="center"
+            title="Instagram">
+	          <span className="label">
+              <span data-icon="instagram"></span>
+            </span>
 	        </a>
 	      </li>
 	    </ul>
