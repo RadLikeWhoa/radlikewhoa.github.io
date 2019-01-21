@@ -75,16 +75,17 @@
 }
 
 [data-button~="dark"] {
-  background-color: $control-dark;
+  color: $default;
+  background-color: darken($main, 10%);
 
   &:hover,
   &:focus {
-    background-color: darken($control-dark, 5%);
+    background-color: darken($main, 15%);
   }
 
   &::before,
   &::after {
-    color: $control-dark;
-    border-color: $control-dark;
+    color: darken($main, 15%);
+    border-color: darken($main, 15%);
   }
 }
