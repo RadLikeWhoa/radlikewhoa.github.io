@@ -6,7 +6,7 @@ tags:
   - Web
   - Library
   - Sass
-learned:
+tasks:
   - Open Source
   - Design
   - Development

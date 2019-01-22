@@ -6,7 +6,7 @@ tags:
   - Web
   - Game
   - React
-learned:
+tasks:
   - Game Design
   - Game Development
   - Mechanics

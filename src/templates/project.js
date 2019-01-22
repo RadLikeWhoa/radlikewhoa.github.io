@@ -51,7 +51,7 @@ export default function Template({
 		        </div>
 		        <div data-col="3-4 M1-2">
 		          <div className="project-meta-body small">
-								{!frontmatter.end && 'since'}
+								{!frontmatter.end && 'since '}
 								<time pubdate={start}>{start}</time>
                 {frontmatter.end && frontmatter.end !== start && ` – ${frontmatter.end}`}
 		          </div>
@@ -143,10 +143,10 @@ export default function Template({
             className="project-meta-item"
             data-col>
 						<div data-col="1-4">
-							<div className="project-meta-label small faded">Learnings</div>
+							<div className="project-meta-label small faded">Tasks</div>
 						</div>
 						<div data-col="3-4">
-							<div className="project-meta-body small">{frontmatter.learned.join(', ')}</div>
+							<div className="project-meta-body small">{frontmatter.tasks.join(', ')}</div>
 						</div>
 					</div>
 					<div className="project-meta-item" data-col>
@@ -160,7 +160,7 @@ export default function Template({
 				</div>
 		    <p data-block="share">
 		      If you enjoyed reading this case study you might want to share it <a href={`https://twitter.com/intent/tweet?url=${url}${frontmatter.path}&amp;text=${frontmatter.title}`}>on Twitter</a>, <a href={`https://facebook.com/sharer.php?u=${url}${frontmatter.path}`}>on Facebook</a>, or <a href={`https://pinboard.in/add?next=same&amp;url=${url}${frontmatter.path}&amp;title=${frontmatter.title}`}>on Pinboard</a>.
-					{frontmatter.link && (<>You should also take a look at the project's <a href={frontmatter.link}>website</a>, if you haven't already.</>)}
+					{frontmatter.link && (<>{' '}You should also take a look at the project's <a href={frontmatter.link}>website</a>, if you haven't already.{' '}</>)}
 					For comments and questions, <a href="mailto:hello@sacha.me">contact me through e-mail</a>.
 		    </p>
         <div className="text-center">
@@ -198,7 +198,7 @@ export const pageQuery = graphql`
 				teaser
 				tags
 				technologies
-				learned
+				tasks
         hero {
           childImageSharp {
             sizes(maxWidth: 1100) {

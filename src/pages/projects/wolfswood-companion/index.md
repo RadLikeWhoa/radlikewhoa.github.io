@@ -3,10 +3,10 @@ title: Wolfswood Companion
 date: 2016-04-01
 path: /projects/wolfswood-companion
 tags:
-  - Native
+  - Mobile
   - App
   - Swift
-learned:
+tasks:
   - Native App Development
   - Design
   - App Publishing

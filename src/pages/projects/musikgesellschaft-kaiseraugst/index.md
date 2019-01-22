@@ -6,7 +6,7 @@ tags:
   - Web
   - Site
   - Wordpress
-learned:
+tasks:
   - Design
   - Development
   - CMS

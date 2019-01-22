@@ -6,7 +6,7 @@ tags:
   - Web
   - Library
   - JavaScript
-learned:
+tasks:
   - Development
   - Open Source
   - Testing

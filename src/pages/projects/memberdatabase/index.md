@@ -5,8 +5,8 @@ path: /projects/memberdatabase
 tags:
   - Web
   - App
-  - Angular.js
-learned:
+  - Angular
+tasks:
   - Project Management
   - Team Work
   - Communication

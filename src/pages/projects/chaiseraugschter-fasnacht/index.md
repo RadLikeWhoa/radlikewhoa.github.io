@@ -1,19 +1,18 @@
 ---
 title: Chaiseraugschter Fasnacht
 date: 2012-02-01
-path: /projects/cahiseraugschter-fasnacht
+path: /projects/chaiseraugschter-fasnacht
 tags:
   - Web
   - Site
   - PHP
-learned:
-  - Content Creation
+tasks:
+  - Content Inventory
   - Templating
-  - Performance
+  - Performance Optimisation
   - Communication
   - Design
   - Development
-  - Redesign
   - Build Processes
 technologies:
   - HTML

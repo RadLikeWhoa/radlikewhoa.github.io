@@ -6,7 +6,7 @@ tags:
   - Web
   - Site
   - HTML
-learned:
+tasks:
   - Communication
   - Design
   - Development

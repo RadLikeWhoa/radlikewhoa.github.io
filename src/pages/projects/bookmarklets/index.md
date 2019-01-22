@@ -6,7 +6,7 @@ tags:
   - Web
   - Site
   - Node.js
-learned:
+tasks:
   - Open Source
   - Build Processes
   - Templating
@@ -22,6 +22,7 @@ background: rgb(122, 124, 115)
 link: https://sacha.me/bookmarklets/
 repo: https://github.com/RadLikeWhoa/bookmarklets
 team: 1
+end: 2019
 teaser: "Many internet users, even casual ones, use bookmarklets on a regular basis. bookmarklets are little links that reside in the browser's bookmarks bar that, when clicked, do things like tweeting the current website or saving a site's images to Pinterest."
 hero: hero.png
 icon: icon.svg

@@ -6,7 +6,7 @@ tags:
   - Web
   - App
   - React
-learned:
+tasks:
   - Idea Finding
   - Design
   - Development

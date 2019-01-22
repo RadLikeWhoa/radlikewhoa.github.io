@@ -3,10 +3,10 @@ title: Count!
 date: 2017-02-01
 path: /projects/count
 tags:
-  - Native
+  - Mobile
   - App
   - Swift
-learned:
+tasks:
   - Design
   - Development
   - Data Persistence

@@ -7,7 +7,7 @@ tags:
   - App
   - React
   - Haskell
-learned:
+tasks:
   - Design
   - Development
   - Functional Programming

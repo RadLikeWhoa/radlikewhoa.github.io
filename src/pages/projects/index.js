@@ -17,7 +17,7 @@ class Projects extends React.Component {
 		const projects = this.props.data.allMarkdownRemark.edges.filter(p => !filter || p.node.frontmatter.tags.indexOf(filter) !== -1)
 
     const filters = {
-      platform: [ 'Web', 'Native' ],
+      platform: [ 'Web', 'Mobile', 'Desktop' ],
   		type: [ 'App', 'Site', 'Library', 'Game' ],
     	tool: [ 'Swift', 'JavaScript', 'Node.js', 'PHP', 'HTML', 'Sass', 'React', 'Angular', 'Wordpress', 'Neos CMS' ]
     }
