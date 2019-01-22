@@ -6,7 +6,7 @@ tags:
   - Web
   - App
   - React
-learned:
+tasks:
 technologies:
 pattern: argyle
 background: rgb(139, 130, 126)
