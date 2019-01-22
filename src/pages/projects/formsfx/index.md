@@ -17,7 +17,7 @@ technologies:
   - CSS
   - JUnit
 pattern: argyle
-background: rgb(212, 123, 177)
+background: rgb(12, 123, 77)
 client: Dirk Lemmermann Software & Consulting
 team: 2
 end: 2017
