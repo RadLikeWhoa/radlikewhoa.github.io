@@ -19,34 +19,7 @@ const About = () => (
 	      </div>
 	      <p>My name is Sacha Schmid. I'm a front-end developer from Switzerland, interested in both interface design and web development. I work at <a href="https://medienmacher.com">Die Medienmacher</a> in Muttenz, Switzerland.</p>
 	    </div>
-	    <ul
-        className="social-list clear"
-        data-grid>
-	      <li
-          className="social-item"
-          data-col="1-2">
-	        <a
-            href="https://github.com/RadLikeWhoa"
-            data-button="center"
-            title="GitHub">
-	          <span className="label">
-              <span data-icon="github"></span>
-            </span>
-	        </a>
-	      </li>
-	      <li
-          className="social-item"
-          data-col="1-2">
-	        <a
-            href="https://instagram.com/__marvolo"
-            data-button="center"
-            title="Instagram">
-	          <span className="label">
-              <span data-icon="instagram"></span>
-            </span>
-	        </a>
-	      </li>
-	    </ul>
+      <p data-block="info">For questions and comments, the best way to contact me is through e-mail at <i>hello@sacha.me</i></p>
 	    <p>In 2017, I graduated from <a href="https://fhnw.ch/en/">University of Applied Sciences and Arts Northwestern Switzerland</a> in Brugg, Switzerland, majoring in Computer Science.</p>
       <div className="about-meta">
         <div className="small faded">2017</div>
@@ -77,6 +50,34 @@ const About = () => (
         <div className="full small">React, Redux, Angular, Ionic, Sass, Wordpress, Neos CMS</div>
       </div>
 	    <p>Other than the web, I am very passionate about music, both listening to my favourite records and creating music with my guitars. Whenever I can, I like to go to concerts and festivals and just enjoy the music and the people around me.</p>
+      <ul
+        className="social-list clear"
+        data-grid>
+	      <li
+          className="social-item"
+          data-col="1-2">
+	        <a
+            href="https://github.com/RadLikeWhoa"
+            data-button="center"
+            title="GitHub">
+	          <span className="label">
+              <span data-icon="github"></span>
+            </span>
+	        </a>
+	      </li>
+	      <li
+          className="social-item"
+          data-col="1-2">
+	        <a
+            href="https://instagram.com/__marvolo"
+            data-button="center"
+            title="Instagram">
+	          <span className="label">
+              <span data-icon="instagram"></span>
+            </span>
+	        </a>
+	      </li>
+	    </ul>
 	  </section>
 	  <section className="content-section wrap">
 	    <h2 className="section-heading">About This Site</h2>
