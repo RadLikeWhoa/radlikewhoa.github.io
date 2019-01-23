@@ -19,7 +19,7 @@ technologies:
   - React
   - Sass
   - PHP
-pattern: argyle
+pattern: cubes
 background: rgb(86, 137, 194)
 repo: https://github.com/RadLikeWhoa/whatthefuckshouldiwatchtonight
 end: 2016
