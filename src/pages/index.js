@@ -22,7 +22,9 @@ class Index extends React.Component {
               className="project-overview"
               data-grid>
               {projects.map(({ node }) => (
-                <div data-col="M1-3">
+                <div
+                  data-col="M1-3"
+                  key={node.frontmatter.path}>
                   <IconWell
                     title={node.frontmatter.title}
                     path={node.frontmatter.path}
@@ -42,8 +44,8 @@ class Index extends React.Component {
     		</section>
     		<section className="home-section wrap">
     		  <h2 className="section-heading">Latest Article</h2>
-					<article class="post-inline hentry">
-			      <h3 class="post-title entry-title">
+					<article className="post-inline hentry">
+			      <h3 className="post-title entry-title">
 			        <Link to={article.frontmatter.path}>{article.frontmatter.title}</Link>
 			      </h3>
             <p className="post-caption">{article.frontmatter.teaser}</p>

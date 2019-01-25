@@ -1,9 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
+import Helmet from 'react-helmet'
 
 import Header from './header'
 import Footer from './footer'
+
+import favicon from '../../static/favicon.png'
 
 const Layout = ({ children, alternate, highlightColor }) => (
   <StaticQuery
@@ -18,6 +21,10 @@ const Layout = ({ children, alternate, highlightColor }) => (
     `}
     render={data => (
       <>
+        <Helmet
+          link={[
+            { rel: 'shortcut icon', type: 'image/png', href: favicon }
+          ]} />
         <Header
           siteTitle={data.site.siteMetadata.title}
           alternate={alternate}

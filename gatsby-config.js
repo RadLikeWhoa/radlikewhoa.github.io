@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Sacha Schmid`,
+    author: `Sacha Schmid`,
     description: `Sacha Schmid is a front-end developer from Switzerland, designing and building websites and applications.`,
-		url: `https://sacha.me`
+		url: `https://sacha.me`,
+    keywords: [ `Front-End`, `Developer`, `Switzerland`, `Engineer`, `Web`, `Designer`, `Developer` ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,12 +21,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Sacha Schmid`,
+        short_name: `Sacha Schmid`,
         start_url: `/`,
-        background_color: `#e95e7a`,
+        background_color: `#faf0e1`,
         theme_color: `#e95e7a`,
-        display: `minimal-ui`
+        display: `minimal-ui`,
+        icon: `src/assets/icon.png`
       },
     },
     `gatsby-plugin-offline`,

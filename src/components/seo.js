@@ -8,8 +8,9 @@ function SEO({ description, lang, meta, keywords, title }) {
     <StaticQuery
       query={detailsQuery}
       render={data => {
-        const metaDescription =
-          description || data.site.siteMetadata.description
+        const metaDescription = description || data.site.siteMetadata.description
+        const metaKeywords = keywords.length ? keywords : data.site.siteMetadata.keywords
+
         return (
           <Helmet
             htmlAttributes={{
@@ -52,10 +53,10 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
             ]
               .concat(
-                keywords.length > 0
+                metaKeywords.length > 0
                   ? {
                       name: `keywords`,
-                      content: keywords.join(`, `),
+                      content: metaKeywords.join(`, `),
                     }
                   : []
               )
@@ -89,6 +90,7 @@ const detailsQuery = graphql`
       siteMetadata {
         title
         description
+        keywords
       }
     }
   }
