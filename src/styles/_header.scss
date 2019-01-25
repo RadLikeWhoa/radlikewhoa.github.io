@@ -105,6 +105,7 @@
     &:nth-child(#{$i}):hover ~ div.active-nav-item,
     &:nth-child(#{$i}):focus ~ div.active-nav-item {
       transform: translateX(($i - 1) * 100%);
+      opacity: 1;
     }
   }
 
@@ -160,6 +161,7 @@
   background-color: $highlight;
   border-radius: 5px;
   pointer-events: none;
+  opacity: 0;
   transition: transform 0.35s ease-in-out;
   will-change: transform;
   z-index: 5;
