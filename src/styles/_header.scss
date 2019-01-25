@@ -56,6 +56,27 @@
   margin-bottom: 0;
   text-align: center;
 
+  @include up-to(m) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($default, 0.9);
+    opacity: 0;
+    z-index: 10;
+    transition: opacity 0.25s ease-in-out;
+    pointer-events: none;
+
+    &.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
   @include at-least(m) {
     width: 50%;
   }
@@ -100,12 +121,20 @@
   transition: background-color 0.35s ease-in-out;
   will-change: background-color;
 
+  @include up-to(m) {
+    width: 50%;
+  }
+
   @for $i from 1 through $nav-item-count {
     &:nth-child(#{$i}).is-active ~ .active-nav-item,
     &:nth-child(#{$i}):hover ~ div.active-nav-item,
     &:nth-child(#{$i}):focus ~ div.active-nav-item {
       transform: translateX(($i - 1) * 100%);
       opacity: 1;
+
+      @include up-to(m) {
+        transform: translate(-50%, ($i - 1) * 100% - 200%);
+      }
     }
   }
 
@@ -168,5 +197,28 @@
 
   .is-alternate & {
     background-color: $main;
+  }
+
+  @include up-to(m) {
+    left: 50%;
+    top: 50%;
+    width: 50%;
+  }
+}
+
+.nav-toggle {
+  height: 3em;
+  width: 3em;
+  padding: 0.75em 0;
+  color: $main;
+  font: inherit;
+  background-color: $highlight;
+  border: none;
+  border-radius: 5px;
+  appearance: none;
+  cursor: pointer;
+
+  @include at-least(m) {
+    display: none;
   }
 }
