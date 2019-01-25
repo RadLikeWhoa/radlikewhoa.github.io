@@ -3,7 +3,7 @@ module.exports = {
     title: `Sacha Schmid`,
     author: `Sacha Schmid`,
     description: `Sacha Schmid is a front-end developer from Switzerland, designing and building websites and applications.`,
-		url: `https://sacha.me`,
+		siteUrl: `https://sacha.me`,
     keywords: [ `Front-End`, `Developer`, `Switzerland`, `Engineer`, `Web`, `Designer`, `Developer` ]
   },
   plugins: [

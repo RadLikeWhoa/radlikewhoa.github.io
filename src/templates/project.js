@@ -10,7 +10,7 @@ export default function Template({
 }) {
   const { markdownRemark, site } = data
   const { frontmatter, html } = markdownRemark
-	const { url } = site.siteMetadata
+	const { siteUrl } = site.siteMetadata
 
 	const start = +frontmatter.date.split(' ').slice(-1).pop()
 
@@ -159,7 +159,7 @@ export default function Template({
 					</div>
 				</div>
 		    <p data-block="share">
-		      If you enjoyed reading this case study you might want to share it <a href={`https://twitter.com/intent/tweet?url=${url}${frontmatter.path}&amp;text=${frontmatter.title}`}>on Twitter</a>, <a href={`https://facebook.com/sharer.php?u=${url}${frontmatter.path}`}>on Facebook</a>, or <a href={`https://pinboard.in/add?next=same&amp;url=${url}${frontmatter.path}&amp;title=${frontmatter.title}`}>on Pinboard</a>.
+		      If you enjoyed reading this case study you might want to share it <a href={`https://twitter.com/intent/tweet?url=${siteUrl}${frontmatter.path}&amp;text=${frontmatter.title}`}>on Twitter</a>, <a href={`https://facebook.com/sharer.php?u=${siteUrl}${frontmatter.path}`}>on Facebook</a>, or <a href={`https://pinboard.in/add?next=same&amp;url=${siteUrl}${frontmatter.path}&amp;title=${frontmatter.title}`}>on Pinboard</a>.
 					{frontmatter.link && (<>{' '}You should also take a look at the project's <a href={frontmatter.link}>website</a>, if you haven't already.{' '}</>)}
 					For comments and questions, <a href="mailto:hello@sacha.me">contact me through e-mail</a>.
 		    </p>
@@ -179,7 +179,7 @@ export const pageQuery = graphql`
   query($path: String!) {
 		site {
 			siteMetadata {
-				url
+				siteUrl
 			}
 		}
     markdownRemark(frontmatter: { path: { eq: $path } }) {
