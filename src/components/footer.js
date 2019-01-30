@@ -1,11 +1,13 @@
 import React from 'react'
 
-const scrollToTop = e => {
+export const scrollToTop = e => {
   let position = window.pageYOffset
   let time = 0
   let percentage
 
-  e.preventDefault()
+  if (e) {
+    e.preventDefault()
+  }
 
   // The easing function is an easeInOutQuad function.
 

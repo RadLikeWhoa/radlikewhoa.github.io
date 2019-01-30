@@ -6,10 +6,26 @@ import SEO from '../../components/seo'
 import ProjectTeaser from '../../components/projectTeaser'
 import FilterButton from '../../components/filterButton'
 
+import { scrollToTop } from '../../components/footer'
+
 class Projects extends React.Component {
   state = {
     filter: '',
     overlaid: false
+  }
+
+  setFilter = filter => {
+    scrollToTop()
+
+    this.setState({
+      overlaid: false
+    })
+
+    setTimeout(() => {
+      this.setState({
+        filter: this.state.filter !== filter ? filter : ''
+      })
+    }, 300)
   }
 
 	render() {
@@ -44,7 +60,7 @@ class Projects extends React.Component {
                     label={f}
                     key={f}
                     type={key}
-                    onClickFilter={() => this.setState({ filter: filter === f ? '' : f, overlaid: false })}
+                    onClickFilter={() => this.setFilter(f)}
                     isActive={filter === f} />
                 )))}
 			        </ul>
@@ -61,7 +77,7 @@ class Projects extends React.Component {
             <ProjectTeaser
               project={node}
               key={node.frontmatter.title}
-              onClickFilter={tag => () => this.setState({ filter: filter === tag ? '' : tag })} />
+              onClickFilter={tag => () => this.setFilter(tag)} />
           ))}
 				</section>
 		  </Layout>
