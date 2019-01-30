@@ -8,7 +8,7 @@ import IconWell from '../components/iconWell'
 class Index extends React.Component {
   render() {
     const article = this.props.data.allMarkdownRemark.edges.filter(a => !a.node.frontmatter.icon)[0].node
-    const projects = this.props.data.allMarkdownRemark.edges.filter(a => !!a.node.frontmatter.icon).slice(0, 3)
+    const projects = this.props.data.allMarkdownRemark.edges.filter(a => !!a.node.frontmatter.icon && [ 'Top 10 Baselland', 'PONG?!', 'Count!' ].indexOf(a.node.frontmatter.title) !== -1)
 
     return (
       <Layout>
