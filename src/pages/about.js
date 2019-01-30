@@ -17,9 +17,9 @@ const About = () => (
             className="avatar"
             alt="Sacha Schmid" />
 	      </div>
-	      <p>My name is Sacha Schmid. I'm a front-end developer from Switzerland, interested in both interface design and web development. I work at <a href="https://medienmacher.com">Die Medienmacher</a> in Muttenz, Switzerland.</p>
+	      <p>My name is Sacha Schmid. I'm a front-end developer from Switzerland, interested in both interface design and web development.</p>
 	    </div>
-      <p data-block="info">For questions and comments, the best way to contact me is through e-mail at <i>hello@sacha.me</i></p>
+      <p data-block="info" className="text-center">For questions and comments you can contact me through e-mail at <a href="mailto:hello@sacha.me">hello@sacha.me</a>.</p>
 	    <p>In 2017, I graduated from <a href="https://fhnw.ch/en/">University of Applied Sciences and Arts Northwestern Switzerland</a> in Brugg, Switzerland, majoring in Computer Science.</p>
       <div className="about-meta">
         <div className="small faded">2017</div>
