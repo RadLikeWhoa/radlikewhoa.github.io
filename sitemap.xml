@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://sacha.me/projects/kusy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/projects/top-10-baselland</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/articles/height-animation</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/projects/pong</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/projects/mosys</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/projects/formsfx</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/projects/count</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/projects/happyflowers</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/projects/what-the-fuck-should-i-watch-tonight</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/projects/wolfswood-companion</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/projects/memberdatabase</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/articles/jsonp</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/projects/musikgesellscaft-kaiseraugst</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/articles/jekyll-rouge</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/articles/css-data-components</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/projects/monomo</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/projects/chirurgie-am-rhein</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/articles/jekyll-word-counts</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/projects/countable</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/projects/bookmarklets</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/projects/chaiseraugschter-fasnacht</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/projects/ssgs</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/about</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/articles</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sacha.me/projects</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+</urlset>
