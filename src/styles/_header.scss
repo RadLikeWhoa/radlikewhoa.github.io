@@ -12,7 +12,9 @@
   }
 
   &.is-alternate a {
-    color: $main;
+    @include at-least(m) {
+      color: $main;
+    }
   }
 
   .wrap {
@@ -64,7 +66,9 @@
     bottom: 0;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 3em 0;
+    text-align: left;
     background-color: rgba($default, 0.9);
     opacity: 0;
     z-index: 10;
@@ -82,26 +86,30 @@
   }
 
   &:hover .site-nav-item.is-active {
-    background-color: rgba(255, 255, 255, 0);
+    @include at-least(m) {
+      background-color: rgba(255, 255, 255, 0);
 
-    .label {
-      transform: translateY(1.5em);
-      opacity: 0;
-    }
+      .label {
+        transform: translateY(1.5em);
+        opacity: 0;
+      }
 
-    [data-icon] {
-      opacity: 1;
+      [data-icon] {
+        opacity: 1;
+      }
     }
   }
 
   .site-nav-item.is-active:hover {
-    .label {
-      transform: translateY(0);
-      opacity: 1;
-    }
+    @include at-least(m) {
+      .label {
+        transform: translateY(0);
+        opacity: 1;
+      }
 
-    [data-icon] {
-      opacity: 0;
+      [data-icon] {
+        opacity: 0;
+      }
     }
   }
 }
@@ -122,7 +130,17 @@
   will-change: background-color;
 
   @include up-to(m) {
-    width: 50%;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 3em);
+    padding: 0.75em 1.5em;
+    margin-bottom: 0.5em;
+    background-color: $highlight;
+    border-radius: 5px;
+
+    .is-alternate & {
+      background-color: $main;
+    }
   }
 
   @for $i from 1 through $nav-item-count {
@@ -131,23 +149,35 @@
     &:nth-child(#{$i}):focus ~ div.active-nav-item {
       transform: translateX(($i - 1) * 100%);
       opacity: 1;
-
-      @include up-to(m) {
-        transform: translate(-50%, ($i - 1) * 100% - 200%);
-      }
     }
   }
 
   .label {
-    position: absolute;
-    top: 0.75em;
-    left: 0;
-    right: 0;
-    bottom: 1.5em;
-    transform: translateY(1.5em);
-    opacity: 0;
-    color: $highlight;
-    pointer-events: none;
+    @include at-least(m) {
+      position: absolute;
+      top: 0.75em;
+      left: 0;
+      right: 0;
+      bottom: 1.5em;
+      transform: translateY(1.5em);
+      opacity: 0;
+      color: $highlight;
+      pointer-events: none;
+    }
+  }
+
+  [data-icon] {
+    @include up-to(m) {
+      margin-left: auto;
+    }
+
+    @include at-least(m) {
+      color: $highlight !important;
+
+      .is-alternate & {
+        color: $main !important;
+      }
+    }
   }
 
   [data-icon],
@@ -159,17 +189,19 @@
   &.is-active,
   &:hover,
   &:focus {
-    [data-icon] {
-      opacity: 0;
-    }
+    @include at-least(m) {
+      [data-icon] {
+        opacity: 0;
+      }
 
-    .label {
-      transform: translateY(0);
-      color: $main;
-      opacity: 1;
+      .label {
+        transform: translateY(0);
+        color: $main;
+        opacity: 1;
 
-      .is-alternate & {
-        color: $highlight;
+        .is-alternate & {
+          color: $highlight;
+        }
       }
     }
   }
@@ -182,27 +214,23 @@
 }
 
 .active-nav-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 3em;
-  width: 25%;
-  background-color: $highlight;
-  border-radius: 5px;
-  pointer-events: none;
-  opacity: 0;
-  transition: transform 0.35s ease-in-out;
-  will-change: transform;
-  z-index: 5;
+  @include at-least(m) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3em;
+    width: 25%;
+    background-color: $highlight;
+    border-radius: 5px;
+    pointer-events: none;
+    opacity: 0;
+    transition: transform 0.35s ease-in-out;
+    will-change: transform;
+    z-index: 5;
 
-  .is-alternate & {
-    background-color: $main;
-  }
-
-  @include up-to(m) {
-    left: 50%;
-    top: 50%;
-    width: 50%;
+    .is-alternate & {
+      background-color: $main;
+    }
   }
 }
 
@@ -217,6 +245,10 @@
   border-radius: 5px;
   appearance: none;
   cursor: pointer;
+
+  .is-alternate & {
+    background-color: $main;
+  }
 
   @include at-least(m) {
     display: none;

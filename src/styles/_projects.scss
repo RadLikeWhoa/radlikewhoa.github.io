@@ -118,14 +118,15 @@
 }
 
 .project-header {
-  padding: 9em 3em 1.5em;
-  margin: -9em -3em 0 -3em;
+  padding: 9em 1.5em 1.5em;
+  margin: -9em -1.5em 0 -1.5em;
   color: $main;
   border-top: 1px solid rgba(#fff, 0.35);
   animation: none;
 
   @include at-least(m) {
     padding: 9em 3em 4.5em;
+    margin: -9em -3em 0 -3em;
   }
 
   .post-title {

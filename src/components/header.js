@@ -36,7 +36,7 @@ class Header extends React.Component {
                 style={{ color: highlightColor }}>
                 Home
               </span>
-              <span data-icon="home"></span>
+              <span data-icon="home" style={{ color: highlightColor }}></span>
             </Link>
       			<Link
               to="/projects"
@@ -46,7 +46,7 @@ class Header extends React.Component {
                 style={{ color: highlightColor }}>
                 Projects
               </span>
-              <span data-icon="case"></span>
+              <span data-icon="case" style={{ color: highlightColor }}></span>
             </Link>
       			<Link
               to="/articles"
@@ -56,7 +56,7 @@ class Header extends React.Component {
                 style={{ color: highlightColor }}>
                 Articles
               </span>
-              <span data-icon="archive"></span>
+              <span data-icon="archive" style={{ color: highlightColor }}></span>
             </Link>
       			<Link
               to="/about"
@@ -66,13 +66,14 @@ class Header extends React.Component {
                 style={{ color: highlightColor }}>
                 About
               </span>
-              <span data-icon="person"></span>
+              <span data-icon="person" style={{ color: highlightColor }}></span>
             </Link>
       			<div className="active-nav-item"></div>
       		</nav>
           <button
             className="nav-toggle"
-            onClick={() => this.setState({ open: true })}>
+            onClick={() => this.setState({ open: true })}
+            style={{ color: highlightColor }}>
             <span data-icon="list"></span>
           </button>
         </div>
